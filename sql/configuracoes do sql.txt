@@ -1,0 +1,12 @@
+login : root
+Senha : null ou ""
+
+usuarios cadastrados no banco para teste:
+
+Acesso de usuario:
+joselito@gmail.com 
+12345c
+
+Acesso de administrador:
+allanfernandesti@gmail.com
+12345c

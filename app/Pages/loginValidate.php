@@ -1,0 +1,28 @@
+<?php
+require("conexao.php");
+
+if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
+    $query = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ? ");
+    $query->execute(array($_POST["email"], $_POST["senha"]));
+
+    if ($query->rowCount()){
+        $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
+        session_start();
+        $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
+        if ($user["adm"] == "1"){
+            echo "<script>window.location = 'admin.php' </script>";
+        } else {
+            echo "<script>window.location = 'main.php' </script>";
+
+        }
+            //abaixo chamando redirect via javascript
+
+    } else{
+        //abaixo configurar caso nao passar ir pra tela login
+        echo 'nao passou';
+
+    }
+} else {
+    //abaixo configurar caso nao passar ir pra tela login
+     echo 'nao passou';
+}
