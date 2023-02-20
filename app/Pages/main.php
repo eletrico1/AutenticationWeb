@@ -9,7 +9,7 @@
         echo "<script>window.location = 'login.php' </script>";
     }
 ?>
-<link rel="stylesheet" href="/AutenticationWebVoxline/css/login.css">
+<link rel="stylesheet" href="../../public/css/login.css">
 <head>
     <title> Area Principal </title>
 </head>
@@ -22,7 +22,6 @@
         <li style="float:right"><a class="active" href="logout.php">Logout</a></li>
     </ul>
     <h3> Area Principal você está logado como usuário <?php echo $nome; ?></h3>
-</div>
 </div>
 </body>
 

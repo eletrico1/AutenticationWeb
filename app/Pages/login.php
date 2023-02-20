@@ -1,9 +1,6 @@
 <?php
-
     include("conexao.php");
    // include ("../controllers/ControllerLogin.php");
-
-
     ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="./public/css/login.css">
@@ -26,16 +23,14 @@
         <input type="text" name="senha" id="senha" placeholder="Digite sua Senha">
         <input type="submit" name="enviar" value="enviar">
     </div>
-        </form>
     </div>
 
-    <div id="secondary"></div>
+    <div id="secondary">
 
-
+    </div>
 
 <div id="footer">
     <h2> Voxline, todos direitos reservados</h2>
 </div>
 </body>
-
 </html>

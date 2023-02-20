@@ -9,7 +9,7 @@ if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
     echo "<script>window.location = 'login.php' </script>";
 }
     ?>
-<link rel="stylesheet" href="/AutenticationWebVoxline/css/login.css">
+<link rel="stylesheet" href="../../public/css/login.css">
 <html lang="pt-br">
 <head>
     <title> Area restrita - <?php echo $nome; ?></title>
@@ -26,8 +26,6 @@ if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
         <h3> Area Restrita você esta logado como Administrador  <?php    echo $nome ?></h3>
     <br>
     <h3> Lista de usuários no banco de dados:</h3>
-</div>
-<div id="content" >
     <?php
         if ($adm):?>
             <table>
@@ -37,7 +35,6 @@ if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
                     <td> Senha</td>
                     <td> nome</td>
                     <td> id</td>
-
                 </tr>
                 </thead>
                 <tbody>
@@ -61,6 +58,9 @@ if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
                 </tbody>
             </table>
         <?php endif; ?>
+
+</div>
+<div id="content" >
 
 </div>
 </body>

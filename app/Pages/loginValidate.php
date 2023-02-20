@@ -1,10 +1,8 @@
 <?php
 require("conexao.php");
-
 if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
     $query = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ? ");
     $query->execute(array($_POST["email"], $_POST["senha"]));
-
     if ($query->rowCount()){
         $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
         session_start();
@@ -18,11 +16,13 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
             //abaixo chamando redirect via javascript
 
     } else{
-        //abaixo configurar caso nao passar ir pra tela login
-        echo 'nao passou';
+        //tratamento de erro com javascript em caso de login não passar
+        echo "<script>alert('Usuário ou senha invalidos');</script>";
+        echo "<script>window.location = '../../index.php' </script>";
 
     }
 } else {
-    //abaixo configurar caso nao passar ir pra tela login
-     echo 'nao passou';
+    //tratamento de erro com javascript em caso de login não passar
+    echo "<script>alert('Usuário ou senha invalidos');</script>";
+    echo "<script>window.location = '../../index.php' </script>";
 }

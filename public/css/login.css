@@ -1,6 +1,6 @@
 div#main {
-    height: 75%;
-    background-color: #e4e5f1;
+    height: 85%;
+    background-color: ghostwhite;
     border-radius: 5px;
     padding-top: 100px;
 }
@@ -35,7 +35,7 @@ ul{
 a {
     display: block;
     padding: 8px;
-    background-color:  #04AA6D;
+    background-color: whitesmoke;
 }
 li a {
     display: block;
@@ -45,12 +45,10 @@ li a {
     text-decoration: none;
     font-family: sans-serif;
 }
-
 li a:hover {
     background-color: #111;
     transition: 1s;
 }
-
 /* Campos Login */
 input[type=text] {
     border: 2px solid red;
@@ -81,12 +79,9 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
     border-radius: 8px;
    /* align-content: center; */
-
 }
 div#campos h3{
     font-family: sans-serif;
-    text-align: center;
-
 }
 div#footer{
     height: 8%;
@@ -94,7 +89,6 @@ div#footer{
     width: 100%;
     border-radius: 5px;
 }
-
 div#footer h2{
     font-family: sans-serif;
     text-align: center;
