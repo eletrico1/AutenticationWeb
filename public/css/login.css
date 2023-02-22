@@ -25,7 +25,7 @@ ul{
     list-style-type: none;
     background-color: margin: 0;
     padding: 0;
-    background-color: #dddddd;
+    background-color: black;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ ul{
 a {
     display: block;
     padding: 8px;
-    background-color: whitesmoke;
+    background-color: #04AA6D;
 }
 li a {
     display: block;
@@ -46,7 +46,7 @@ li a {
     font-family: sans-serif;
 }
 li a:hover {
-    background-color: #111;
+    background-color:white;
     transition: 1s;
 }
 /* Campos Login */
