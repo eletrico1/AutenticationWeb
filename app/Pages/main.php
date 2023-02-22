@@ -16,7 +16,7 @@
 <body>
 <div id="main">
     <ul>
-        <li><a href="admin.php">Admin Panel</a></li>
+        <li><a href="#">Admin Panel</a></li>
         <li><a href="main.php">Home</a></li>
 
         <li style="float:right"><a class="active" href="logout.php">Logout</a></li>
