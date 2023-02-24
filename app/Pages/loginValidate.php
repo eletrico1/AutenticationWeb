@@ -10,7 +10,7 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
         if ($user["adm"] == "1"){
             echo "<script>window.location = 'admin.php' </script>";
         } else {
-            echo "<script>window.location = 'main.php' </script>";
+            echo "<script>window.location = '../../twigLoader.php' </script>";
 
         }
             //abaixo chamando redirect via javascript
