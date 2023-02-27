@@ -8,13 +8,11 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
         session_start();
         $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
         if ($user["adm"] == "1"){
-            echo "<script>window.location = 'admin.php' </script>";
+            echo "<script>window.location = '../views/admin.php' </script>";
         } else {
             echo "<script>window.location = '../../twigLoader.php' </script>";
-
         }
             //abaixo chamando redirect via javascript
-
     } else{
         //tratamento de erro com javascript em caso de login não passar
         echo "<script>alert('Usuário ou senha invalidos');</script>";
