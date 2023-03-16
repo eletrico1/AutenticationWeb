@@ -1,37 +1,38 @@
-<?php
-    include_once 'conexao.php';
-    include_once 'dark-mode.php';
-    ?>
-  <!--
-    include ("../controllers/ControllerLogin.php");
-     abaixo possivel implementação senha segura com criptografia passwordsHASH nativa PHP
-   $senha = "86873413";
-   $options = ['cost'=>12];
-   $senhaSegura = password_hash($senha, PASSWORD_DEFAULT,$options);
-    echo $senhaSegura;
-    -->
-  
-    <link href="cheatsheet-nights.css" rel="stylesheet">
-    <!-- Inform modern browsers that this page supports both dark and light color schemes,
-    and the page author prefers light. -->
-    <meta name="color-scheme" content="light dark">
-    
-    <!-- Load the alternate CSS first ... -->
-    <link id="css-dark" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-night.min.css" media="(prefers-color-scheme: dark)">
-    <!-- ... and then the primary CSS last for a fallback on very old browsers that don't support media filtering -->
-    <link id="css-light" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" media="(prefers-color-scheme: light)">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html lang="pt-br" data-bs-set-darkmode-onload="true">
-<head>
-    <title> Login Page System</title>
-</head>
-<body class="">
-<!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary " >
+    <!-- The page supports both dark and light color schemes,
+         and the page author prefers / default is light. -->
+    <meta name="color-scheme" content="light dark">
+
+    <!-- If `prefers-color-scheme` is not supported, fall back to light mode.
+         In this case, inject the `light` CSS before the others, with
+         no media filter so that it will be downloaded with highest priority. -->
+    <script>
+      if (window.matchMedia("(prefers-color-scheme: dark)").media === "not all") {
+        document.documentElement.style.display = "none";
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          "<link id=\"css\" rel=\"stylesheet\" href=\"../dist/css/bootstrap.css\" onload=\"document.documentElement.style.display = ''\">"
+        );
+      }
+    </script>
+    <!-- Load the alternate CSS first ...
+         in this case the Bootstrap-Dark Variant CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-night.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <!-- and then the primary CSS last ...
+         in this case the (original) Bootstrap Variant CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+   <!-- navbar -->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary " >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">AutenticationSystem</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,12 +47,11 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
                     <a class="nav-link" href="#">Logout</a>
                  </li>
                 <li class ="nav-item">
-                <form class="ms-auto d-flex" style="margin-top:5%">
-                    <div class="form-check form-switch tooltip-demo">
-            <input class="form-check-input" type="checkbox" id="toggle-btn" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Toggle Dark Mode or press [D] hot-key">
-            <label class="form-check-label" for="toggle-btn">Modo Escuro</label>
-        </form>
-        </li>
+                <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Dark-Mode</label>
+        </div>
+    </li>
 </ul>
 </div</div>
         </nav>
@@ -78,5 +78,7 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
         </div>
          <!-- Copyright -->
         </footer>
-</body>
+    <!-- Optional Bootstrap JavaScript -->
+    <script src="location/of/the/bootstrap.js/here"></script>
+  </body>
 </html>
