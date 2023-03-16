@@ -10,8 +10,9 @@
    $senhaSegura = password_hash($senha, PASSWORD_DEFAULT,$options);
     echo $senhaSegura;
     -->
-  
-    <link href="cheatsheet-nights.css" rel="stylesheet">
+  <!-- Abaixo Link CSS -->
+    <link href="../public/cheatsheet-night.css" rel="stylesheet">
+
     <!-- Inform modern browsers that this page supports both dark and light color schemes,
     and the page author prefers light. -->
     <meta name="color-scheme" content="light dark">
@@ -31,27 +32,27 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
 </head>
 <body class="">
 <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary " >
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">AutenticationSystem</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                   </button>
-                     <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                     <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="#">Admin Panel</a>
-                    </li>
-                    <li class="nav-item">
+                    <span class="navbar-toggler-icon"></span>
+                     </button>
+                         <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                         <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Admin Panel</a>
+                        </li>
+                      <li class="nav-item">
                     <a class="nav-link" href="#">Logout</a>
                  </li>
                 <li class ="nav-item">
-                <form class="ms-auto d-flex" style="margin-top:5%">
-                    <div class="form-check form-switch tooltip-demo">
-            <input class="form-check-input" type="checkbox" id="toggle-btn" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Toggle Dark Mode or press [D] hot-key">
-            <label class="form-check-label" for="toggle-btn">Modo Escuro</label>
-        </form>
-        </li>
+               <form class="ms-auto d-flex" style="margin-top:5%">
+            <div class="form-check form-switch tooltip-demo">
+        <input class="form-check-input" type="checkbox" id="toggle-btn" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Toggle Dark Mode or press [D] hot-key">
+      <label class="form-check-label" for="toggle-btn">Modo Escuro</label>
+    </form>
+   </li>
 </ul>
 </div</div>
         </nav>
@@ -60,9 +61,9 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
         <div class="container-sm">
             <form action="../AutenticationWeb/app/functions/loginValidate.php" method="post">
                 <h1>Faça o Login Abaixo </h1>
-                <input class="form-control" type="text"  id="email" name="email" placeholder="Email" aria-label="default input example">
+                <input class="form-control form-control-lg" type="text"  id="email" name="email" placeholder="Email" aria-label="default input example">
                 <br>
-                <input class="form-control" type="text"  id="senha" name="senha" placeholder="Senha" aria-label="default input example">
+                <input class="form-control form-control-lg" type="text"  id="senha" name="senha" placeholder="Senha" aria-label="default input example">
                 <br>
                 <button type="submit" class="btn btn-success btn-lg" value="enviar" name="enviar">Entrar</button>
         </div>
