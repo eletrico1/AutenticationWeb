@@ -60,7 +60,7 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
         <div style="height: 60%; margin-top: 10%;">
         <div class="container-sm">
             <form action="../AutenticationWeb/app/functions/loginValidate.php" method="post">
-                <h1>Faça o Login Abaixo </h1>
+                <h1>Abaixo faça o login LUPU </h1>
                 <input class="form-control form-control-lg" type="text"  id="email" name="email" placeholder="Email" aria-label="default input example">
                 <br>
                 <input class="form-control form-control-lg" type="text"  id="senha" name="senha" placeholder="Senha" aria-label="default input example">
